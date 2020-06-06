@@ -19,8 +19,8 @@ def process_data(data):
 
 def model_create():
 	model = tf.keras.models.Sequential()
-	model.add(units = 3, activation = 'relu', input_shape = (2,))
-	model.add(units = 2, activation = 'relu')
+	model.add(units = 2, activation = 'relu', input_shape = (2,))
+	# model.add(units = 2, activation = 'relu')
 	model.add(units = 1, activation = 'sigmoid')
 	model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
 	return model
